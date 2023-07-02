@@ -1,0 +1,1 @@
+SELECT "Couriers".login,COUNT("Orders".id) as orders_count  FROM "Orders" left join "Couriers" on "Orders"."courierId"="Couriers".id GROUP by "Orders"."inDelivery","Couriers".login;
